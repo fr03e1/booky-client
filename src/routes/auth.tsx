@@ -1,9 +1,9 @@
 import {ERoutes, RouteType} from "../types/RouteType";
-import Basket from "../pages/Basket";
+import CartPage from "../pages/CartPage";
 
 export const authRoutes: RouteType[] = [
     {
-        path: ERoutes.BASKET_ROUTE,
-        component: <Basket />,
+        path: ERoutes.CART_ROUTE,
+        component: <CartPage />,
     },
 ];

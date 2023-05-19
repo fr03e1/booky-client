@@ -21,10 +21,10 @@ const WidgetBox = () => {
         <div className="right d-flex align-items-center justify-content-end">
             <ul className="main-menu__widge-box d-flex align-items-center ">
                 <li className="d-lg-block d-none"><Link to={ERoutes.LOGIN_ROUTE}>Войти</Link></li>
-                <li className="cartm"><a href="#" className="number cart-icon"> <i
+                <li className="cartm"><Link to={ERoutes.CART_ROUTE} className="number cart-icon"> <i
                     className="flaticon-shopping-cart"></i><span
                     className="count">(0)</span>
-                </a>
+                </Link>
                 </li>
             </ul>
         </div>

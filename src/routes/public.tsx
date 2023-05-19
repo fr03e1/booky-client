@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import MainPage from "../pages/MainPage";
 import BlogPage from "../pages/BlogPage";
+import CartPage from "../pages/CartPage";
 
 export const publicRoutes: RouteType[] = [
     {
@@ -30,5 +31,9 @@ export const publicRoutes: RouteType[] = [
     {
         path: ERoutes.BLOG_ROUTE,
         component: <BlogPage />,
+    },
+    {
+        path: ERoutes.CART_ROUTE,
+        component: <CartPage/>,
     },
 ];
