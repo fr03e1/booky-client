@@ -43,10 +43,10 @@ const Footer = () => {
                                     <h4> Полезные ссылки </h4>
                                 </div>
                                 <ul className="footer-links">
-                                    <li><a href="#">Аккаунт</a></li>
+                                    <li><Link to={ERoutes.ACCOUNT_ROUTE}>Аккаунт</Link></li>
                                     <li><Link to={ERoutes.LOGIN_ROUTE}>Войти</Link></li>
                                     <li><Link to={ERoutes.CART_ROUTE}>Корзина</Link></li>
-                                    <li><a href="#">Избранное</a></li>
+                                    <li><Link to={ERoutes.WISHLIST_ROUTE}>Избранное</Link></li>
                                 </ul>
                             </div>
                         </div>

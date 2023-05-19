@@ -5,7 +5,7 @@ import Pagination from "../components/Pagination";
 import Breadcrumb from "../components/Breadcrumb";
 import ItemList from "../components/ItemList";
 
-const Shop = () => {
+const ShopPage = () => {
     return (
         <div className="product-grid pt-60 pb-120">
             <div className="container">
@@ -22,4 +22,4 @@ const Shop = () => {
     )
 };
 
-export default Shop;
+export default ShopPage;

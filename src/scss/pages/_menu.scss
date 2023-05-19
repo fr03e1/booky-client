@@ -1134,6 +1134,17 @@ Menu Css
     z-index: 9999;
 }
 
+.side-cart-bottom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #000;
+    opacity: 0.9;
+    z-index: 100;
+    width: calc(100vw + 280px);
+}
+
 .side-cart-closer.active {
     width: calc(100vw + 280px);
 }
@@ -1142,6 +1153,7 @@ Menu Css
     right: 0%;
     width: 280px;
     transform: translateX(0px);
+
 }
 
 /* Sidebar-content Css */

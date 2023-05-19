@@ -1,8 +1,8 @@
 import {ERoutes, RouteType} from "../types/RouteType";
-import Shop from "../pages/Shop";
+import ShopPage from "../pages/ShopPage";
 import ItemPage from "../pages/ItemPage";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
+import RegisterPage from "../pages/RegisterPage";
+import LoginPage from "../pages/LoginPage";
 import MainPage from "../pages/MainPage";
 import BlogPage from "../pages/BlogPage";
 import CartPage from "../pages/CartPage";
@@ -10,15 +10,15 @@ import CartPage from "../pages/CartPage";
 export const publicRoutes: RouteType[] = [
     {
         path: ERoutes.SHOP_ROUTE,
-        component: <Shop />,
+        component: <ShopPage />,
     },
     {
         path: ERoutes.LOGIN_ROUTE,
-        component: <Login />,
+        component: <LoginPage />,
     },
     {
         path: ERoutes.REGISTRATION_ROUTE,
-        component: <Register />,
+        component: <RegisterPage />,
     },
     {
         path: ERoutes.ITEM_ROUTE + "/:id",

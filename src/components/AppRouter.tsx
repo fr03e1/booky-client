@@ -1,13 +1,14 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import Shop from "../pages/Shop";
+import ShopPage from "../pages/ShopPage";
 import Layout from "../pages/Layout";
 import {authRoutes} from "../routes/auth";
 import {publicRoutes} from "../routes/public";
+import ErrorPage from "../pages/ErrorPage";
 
 
 const AppRouter = () => {
-   const isAuth = true; //TODO
+   const isAuth = false; //TODO
 
     return (
         <Routes>
@@ -20,7 +21,7 @@ const AppRouter = () => {
                 {publicRoutes.map(({ path, component }) => (
                     <Route key={path} path={path} element={component} />
                 ))}
-                <Route path="*" element={<Shop/>} />
+                <Route path="*" element={<ErrorPage/>} />
             </Route>
         </Routes>
     );

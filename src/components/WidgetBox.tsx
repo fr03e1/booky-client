@@ -1,31 +1,42 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
+import {WidgetBoxProps} from "../types/props/WidgetBoxProps";
+import CartModal from "./modals/CartModal";
 
-const WidgetBox = () => {
-    const isAuth = false;
-    const navigate = useNavigate();
+const WidgetBox: React.FC<WidgetBoxProps> = ({active, setActive}) => {
+    const isAuth = true;
+    const cartRef = useRef<HTMLDivElement>(null);
 
     const box = isAuth ? (<div className="right d-flex align-items-center justify-content-end">
         <ul className="main-menu__widge-box d-flex align-items-center ">
-            <li className="d-lg-block d-none"><a href="my-account.html"><i
-                className="flaticon-user"></i> </a></li>
-            <li className="d-lg-block d-none"><a href="wishlist.html" className="number"> <i
-                className="flaticon-heart"></i> </a></li>
-            <li className="cartm"><a href="#0" className="number cart-icon"> <i
-                className="flaticon-shopping-cart"></i><span className="count">(5)</span>
-            </a>
-            </li>
+            <li className="d-lg-block d-none"><Link to={ERoutes.ACCOUNT_ROUTE}><i
+                className="flaticon-user"></i> </Link></li>
+            <li className="d-lg-block d-none"><Link to={ERoutes.WISHLIST_ROUTE} className="number"> <i
+                className="flaticon-heart"></i> </Link></li>
+           <div ref={cartRef}>
+               <button
+                   id="cart-btn"
+                   className="cartm btn-reset"
+                   onClick={() => setActive(!active)}
+               ><i
+                   className="flaticon-shopping-cart"></i><span
+                   className="count">(0)</span>
+               </button>
+           </div>
+            <CartModal active={active} setActive={setActive} cartRef={cartRef}/>
         </ul>
     </div>) : (
         <div className="right d-flex align-items-center justify-content-end">
             <ul className="main-menu__widge-box d-flex align-items-center ">
                 <li className="d-lg-block d-none"><Link to={ERoutes.LOGIN_ROUTE}>Войти</Link></li>
-                <li className="cartm"><Link to={ERoutes.CART_ROUTE} className="number cart-icon"> <i
+                <button
+                    className="cartm"
+                    onClick={() => setActive(true)}
+                ><i
                     className="flaticon-shopping-cart"></i><span
                     className="count">(0)</span>
-                </Link>
-                </li>
+                </button>
             </ul>
         </div>
     )

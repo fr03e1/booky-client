@@ -1,6 +1,7 @@
 import React from 'react';
 import {ERoutes} from "../types/RouteType";
 import {Link} from "react-router-dom";
+import CartModal from "./modals/CartModal";
 
 const NavBar = () => {
     return (

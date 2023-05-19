@@ -8,6 +8,8 @@ export enum ERoutes {
     ITEM_ROUTE = "/item",
     MAIN_ROUTE = "/",
     BLOG_ROUTE = "/blog",
+    ACCOUNT_ROUTE = "/account",
+    WISHLIST_ROUTE = "/wishlist",
 }
 
 export type RouteType = {
