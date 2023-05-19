@@ -4,9 +4,11 @@ import Search from "./Search";
 import MobileMenu from "./MobileMenu";
 import WidgetBox from "./WidgetBox";
 import CartModal from "./modals/CartModal";
+import {Link} from "react-router-dom";
+import {ERoutes} from "../types/RouteType";
 
 const Header = () => {
-    const [active,setActive] = React.useState(false);
+    const [active, setActive] = React.useState(false);
 
     return (
         <header className="header-default">
@@ -27,11 +29,13 @@ const Header = () => {
                                 <Search/>
                             </div>
                             <div className="col-4 text-center">
-                                <div className="middle"><a href="index.html" className="logo"> <img
-                                    src="../assets;" alt=""/><h2>Booky.</h2> </a></div>
+                                <div className="middle">
+                                    <Link to={ERoutes.MAIN_ROUTE} className="logo">
+                                        <img alt=""/><h2>Booky.</h2>
+                                    </Link></div>
                             </div>
                             <div className="col-4 text-end">
-                             <WidgetBox active={active} setActive={setActive}/>
+                                <WidgetBox active={active} setActive={setActive}/>
                             </div>
                         </div>
                     </div>

@@ -1,38 +1,40 @@
 import React from 'react';
 import {ShopItemProps} from "../types/props/ShopItemProps";
 import image from '../assets/images/37.jpeg';
-const ShopItem:React.FC<ShopItemProps> = ({title,authors,price}) => {
+import {Link} from "react-router-dom";
+import {ERoutes} from "../types/RouteType";
+
+const ShopItem: React.FC<ShopItemProps> = ({title, authors, price}) => {
     return (
-        <div>
-            <div className="product-grid-two list mt-30">
-                <div className="product-grid-two-content text-center">
-                    <div className="d-flex justify-content-between">
-                        <div className="justify-content-around">
-                            <span>Modern</span>
-                            <h5><a href="#"> {title} </a>
-                            </h5>
-                            <p>{price} р.</p>
-                            <p className="text"> Typi non habent claritatem insitam usus
-                                legentis qui facit eorum claritatem Investigationes
-                                demonstraverunt lectores legere mele lius quod legunt
-                                saepius Claritas est etiam processus a capitalize on low
-                                hanging </p>
-                        </div>
-                        <img width={200} height={255} src={image}/>
+
+        <div className="col-xl-3 col-lg-6 col-6 ">
+            <div className="products-three-single w-100 h-300 mt-30">
+                <div className="products-three-single-img">
+                    <img
+                        src={image}
+                        className="first-img" alt=""/>
+                    <img
+                        src={image}
+                        alt="" className="hover-img"/>
+                    <a href="#" className="addcart btn--primary style2">
+                        В корзину </a>
+                    <div className="products-grid__usefull-links">
+                        <ul>
+                            <li><a href="#"> <i className="flaticon-heart">
+                            </i> <span>В избранное</span> </a></li>
+                            <li><Link to={ERoutes.ITEM_ROUTE + '/id'} className="popup_link"> <i
+                                className="flaticon-visibility"></i>
+                                <span> Просмотр</span>
+                            </Link></li>
+                        </ul>
                     </div>
-                    <div className="product-grid-two__overlay-box d-flex justify-content-end">
-                        <div className="title">
-                            <h6><a href="#">Добавить в корзину</a></h6>
-                        </div>
-                        <div className="icon">
-                            <ul>
-                                <li><a href="#" className="popup_link"><i
-                                    className="flaticon-eye"></i></a></li>
-                                <li><a href="#"><i
-                                    className="flaticon-heart"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                </div>
+                <div className="products-three-single-content text-center"><span>{authors}</span>
+                    <h5><Link to={ERoutes.ITEM_ROUTE + '/1'}> {title} </Link>
+                    </h5>
+                    <p>
+                        1500 Р
+                    </p>
                 </div>
             </div>
         </div>

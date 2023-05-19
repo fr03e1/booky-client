@@ -58,7 +58,7 @@ const CartModal: React.FC<CartModalProps> = ({active, setActive, cartRef}) => {
                     <h6 className="text-uppercase">Общая стоимость:</h6>
                     <h6 className="ammount text-uppercase">$850.00</h6>
                 </div>
-                <div className="button-box d-flex justify-content-between"><Link to={ERoutes.CART_ROUTE}
+                <div className="button-box d-flex justify-content-between"><Link onClick={()=>setActive(false)} to={ERoutes.CART_ROUTE}
                                                                                  className="btn_black"> В корзину
                 </Link> <a href="#" className="button-2 btn_theme"> Оформить заказ </a></div>
             </div>
