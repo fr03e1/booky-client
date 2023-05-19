@@ -3,8 +3,11 @@ import payment1 from '../assets/images/payment_method/payment_1.png';
 import payment2 from '../assets/images/payment_method/payment_2.png';
 import payment3 from '../assets/images/payment_method/payment_3.png';
 import payment4 from '../assets/images/payment_method/payment_4.png';
+import {ERoutes} from "../types/RouteType";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
+
     return (
         <footer className="footer-default footer-style-1">
 
@@ -14,9 +17,7 @@ const Footer = () => {
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
                             <div className="footer-default__single-box">
                                 <div className="company-info">
-                                    <div className="footer-logo"><a href="index.html"> <img
-                                        src="assets/images/logo/logo-2.png"
-                                        alt=""/> </a></div>
+                                    <div className="footer-logo"><Link to={ERoutes.MAIN_ROUTE}>Booky.</Link></div>
                                     <div className="text1">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa cum dolor dolores, dolorum eligendi impedit inventore, laboriosam magni quaerat, repudiandae sunt! Alias autem ex nam odit quaerat soluta sunt?</p>
                                     </div>
@@ -42,10 +43,10 @@ const Footer = () => {
                                     <h4> Полезные ссылки </h4>
                                 </div>
                                 <ul className="footer-links">
-                                    <li><a href="my-account.html">Аккаунт</a></li>
-                                    <li><a href="login.html">Войти</a></li>
-                                    <li><a href="cart.html">Корзина</a></li>
-                                    <li><a href="wishlist.html">Избранное</a></li>
+                                    <li><a href="#">Аккаунт</a></li>
+                                    <li><Link to={ERoutes.LOGIN_ROUTE}>Войти</Link></li>
+                                    <li><Link to={ERoutes.CART_ROUTE}>Корзина</Link></li>
+                                    <li><a href="#">Избранное</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,11 +56,11 @@ const Footer = () => {
                                     <h4> Информация </h4>
                                 </div>
                                 <ul className="footer-links">
-                                    <li><a href="about-us.html">О нас</a></li>
-                                    <li><a href="contact.html">Контакты </a></li>
-                                    <li><a href="faq.html">Faq</a></li>
-                                    <li><a href="blog.html">Последний пост</a></li>
-                                    <li><a href="order-track.html">Отслеживать товар</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Контакты </a></li>
+                                    <li><a href="#">Faq</a></li>
+                                    <li><a href="#">Последний пост</a></li>
+                                    <li><a href="#">Отслеживать товар</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -89,9 +90,9 @@ const Footer = () => {
                 <div className="container">
                     <div className="footer_bottom_content">
                         <div className="copyright wow fadeInUp animated">
-                            <p>© 2022 <a href="index.html">Booky.</a> Все права защищены.</p>
+                            <p>© 2022 <Link to={ERoutes.MAIN_ROUTE}>Booky.</Link> Все права защищены.</p>
                         </div>
-                        <div className="footer-payment wow fadeInUp animated"><a href="#0"> <img
+                        <div className="footer-payment wow fadeInUp animated"><a href="#"> <img
                             src={payment1} alt="payment"/> </a> <a href="#"> <img
                             src={payment2} alt="payment"/> </a> <a href="#"> <img
                             src={payment3} alt="payment"/> </a> <a href="#"> <img
