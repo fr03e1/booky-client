@@ -3,6 +3,7 @@ import image from '../assets/images/inner-pages/login-bg.png';
 import Breadcrumb from "../components/Breadcrumb";
 
 const Register = () => {
+
     return (
         <main className="overflow-hidden ">
             <Breadcrumb/>

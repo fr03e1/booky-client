@@ -3,6 +3,7 @@ import Filters from "../components/Filters";
 import SortBar from "../components/SortBar";
 import Pagination from "../components/Pagination";
 import Breadcrumb from "../components/Breadcrumb";
+import ItemList from "../components/ItemList";
 
 const Shop = () => {
     return (
@@ -12,11 +13,7 @@ const Shop = () => {
                     <Filters/>
                     <div className="col-xl-9 col-lg-8">
                         <SortBar/>
-                        <div className="row">
-                            <div className="col-12">
-
-                            </div>
-                        </div>
+                        <ItemList/>
                         <Pagination/>
                     </div>
                 </div>
