@@ -1,6 +1,8 @@
 import React from 'react';
 import Breadcrumb from "../components/Breadcrumb";
 import image from "../assets/images/inner-pages/login-bg.png";
+import {Link} from "react-router-dom";
+import {ERoutes} from "../types/RouteType";
 
 const Login = () => {
     return (
@@ -14,7 +16,7 @@ const Login = () => {
                                  style={{backgroundImage: `url${image}`}}>
                                 <div className="top-title text-center ">
                                     <h2>Войти</h2>
-                                    <p>У вас нет аккаунта? <a href="login.html">Зарегестрироваться</a></p>
+                                    <p>У вас нет аккаунта? <Link to={ERoutes.REGISTRATION_ROUTE}>Зарегестрироваться</Link></p>
                                 </div>
                                 <form className="common-form">
                                     <div className="form-group"><input type="email" className="form-control"

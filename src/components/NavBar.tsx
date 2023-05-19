@@ -1,4 +1,6 @@
 import React from 'react';
+import {ERoutes} from "../types/RouteType";
+import {Link} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -7,9 +9,9 @@ const NavBar = () => {
                 <div className="row">
                     <nav>
                         <ul className="page-dropdown-menu d-flex align-items-center justify-content-center">
-                            <li className="dropdown-list"><a href="#0"> <span>Главная</span></a></li>
-                            <li className="dropdown-list"><a href="#0"> <span>Магазин </span></a></li>
-                            <li className="dropdown-list megamenu "><a href="#0"> <span>Блог </span></a></li>
+                            <li className="dropdown-list"><Link to={ERoutes.MAIN_ROUTE}> <span>Главная</span></Link></li>
+                            <li className="dropdown-list"><Link to={ERoutes.SHOP_ROUTE}> <span>Магазин </span></Link></li>
+                            <li className="dropdown-list megamenu "><Link to={ERoutes.BLOG_ROUTE}> <span>Блог </span></Link></li>
                         </ul>
                     </nav>
                 </div>

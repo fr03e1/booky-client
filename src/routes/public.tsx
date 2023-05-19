@@ -3,6 +3,8 @@ import Shop from "../pages/Shop";
 import ItemPage from "../pages/ItemPage";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import MainPage from "../pages/MainPage";
+import BlogPage from "../pages/BlogPage";
 
 export const publicRoutes: RouteType[] = [
     {
@@ -20,5 +22,13 @@ export const publicRoutes: RouteType[] = [
     {
         path: ERoutes.ITEM_ROUTE + "/:id",
         component: <ItemPage />,
+    },
+    {
+        path: ERoutes.MAIN_ROUTE,
+        component: <MainPage />,
+    },
+    {
+        path: ERoutes.BLOG_ROUTE,
+        component: <BlogPage />,
     },
 ];

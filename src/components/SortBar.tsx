@@ -7,19 +7,18 @@ const SortBar = () => {
                 <div
                     className="shop-grid-page-top-info p-0 justify-content-md-between justify-content-center">
                     <div className="left-box wow fadeInUp animated">
-                        <p>Showing 1-12 of 50 Results</p>
+                        <p>Показано 1-12 из 50 товаров</p>
                     </div>
                     <div
                         className="right-box justify-content-md-between justify-content-center wow fadeInUp animated">
                         <div className="short-by">
                             <div className="select-box"><select className="wide">
-                                <option data-display="Short by latest">Featured</option>
-                                <option value="1">Best selling</option>
-                                <option value="2">Alphabetically, A-Z</option>
-                                <option value="3">Alphabetically, Z-A</option>
-                                <option value="3">Price, low to high</option>
-                                <option value="3">Price, high to low</option>
-                                <option value="3">Date, old to new</option>
+                                <option data-display="Short by latest">Лучшее</option>
+                                <option value="2">По Алфовиту, А-Я</option>
+                                <option value="3">По Алфовиту, Я-А</option>
+                                <option value="3">По цене, по возрт.</option>
+                                <option value="3">По цене, по убыванию.</option>
+                                <option value="3">По дате, по убыванию</option>
                             </select></div>
                         </div>
                         <div

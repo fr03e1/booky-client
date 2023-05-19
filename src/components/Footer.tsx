@@ -1,4 +1,8 @@
 import React from 'react';
+import payment1 from '../assets/images/payment_method/payment_1.png';
+import payment2 from '../assets/images/payment_method/payment_2.png';
+import payment3 from '../assets/images/payment_method/payment_3.png';
+import payment4 from '../assets/images/payment_method/payment_4.png';
 
 const Footer = () => {
     return (
@@ -14,8 +18,7 @@ const Footer = () => {
                                         src="assets/images/logo/logo-2.png"
                                         alt=""/> </a></div>
                                     <div className="text1">
-                                        <p>Orchestrate maintainable mindshare through equity invested action items.
-                                            Compellingly procrastinate...</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur culpa cum dolor dolores, dolorum eligendi impedit inventore, laboriosam magni quaerat, repudiandae sunt! Alias autem ex nam odit quaerat soluta sunt?</p>
                                     </div>
                                     <div className="newsletter-bottom d-flex align-items-center">
                                         <ul className="footer__medio-boxx  medio-boxx  two d-flex align-items-center">
@@ -36,45 +39,44 @@ const Footer = () => {
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
                             <div className="footer-default__single-box">
                                 <div className="footer-title">
-                                    <h4> Useful Links </h4>
+                                    <h4> Полезные ссылки </h4>
                                 </div>
                                 <ul className="footer-links">
-                                    <li><a href="my-account.html">Account</a></li>
-                                    <li><a href="login.html">Sign In</a></li>
-                                    <li><a href="cart.html">View Cart</a></li>
-                                    <li><a href="wishlist.html">My WishList</a></li>
-                                    <li><a href="compare.html">Compare Products</a></li>
+                                    <li><a href="my-account.html">Аккаунт</a></li>
+                                    <li><a href="login.html">Войти</a></li>
+                                    <li><a href="cart.html">Корзина</a></li>
+                                    <li><a href="wishlist.html">Избранное</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
                             <div className="footer-default__single-box">
                                 <div className="footer-title">
-                                    <h4> Information </h4>
+                                    <h4> Информация </h4>
                                 </div>
                                 <ul className="footer-links">
-                                    <li><a href="about-us.html">About us</a></li>
-                                    <li><a href="contact.html">Contact Us </a></li>
+                                    <li><a href="about-us.html">О нас</a></li>
+                                    <li><a href="contact.html">Контакты </a></li>
                                     <li><a href="faq.html">Faq</a></li>
-                                    <li><a href="blog.html">Latest Posts</a></li>
-                                    <li><a href="order-track.html">Order Track</a></li>
+                                    <li><a href="blog.html">Последний пост</a></li>
+                                    <li><a href="order-track.html">Отслеживать товар</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 mt-30 wow fadeInUp animated">
                             <div className="footer-default__single-box">
                                 <div className="footer-title">
-                                    <h4> Office </h4>
+                                    <h4> Адрес офиса </h4>
                                 </div>
                                 <div className="footer-address-box ">
                                     <div className="text1 pt-3">
-                                        <p>29 Holles Place, Dublin 2 D02 YY46</p>
+                                        <p>Lorem ipsum dolor sit amet.</p>
                                     </div>
                                     <div className="text2">
-                                        <p>68 Jay Street, Suite 902 New Side <br/> Brooklyn, NY 11201</p>
+                                        <p>Lorem ipsum dolor. <br/> Lorem ipsum dolor.</p>
                                     </div>
                                     <div className="text3">
-                                        <p>New York, United States</p>
+                                        <p>Lorem ipsum dolor sit.</p>
                                     </div>
                                 </div>
                             </div>
@@ -90,15 +92,15 @@ const Footer = () => {
                             <p>© 2022 <a href="index.html">Booky.</a> Все права защищены.</p>
                         </div>
                         <div className="footer-payment wow fadeInUp animated"><a href="#0"> <img
-                            src="assets/images/payment_method/payment_1.png" alt="payment"/> </a> <a href="#0"> <img
-                            src="assets/images/payment_method/payment_2.png" alt="payment"/> </a> <a href="#0"> <img
-                            src="assets/images/payment_method/payment_3.png" alt="payment"/> </a> <a href="#0"> <img
-                            src="assets/images/payment_method/payment_4.png" alt="payment"/> </a></div>
+                            src={payment1} alt="payment"/> </a> <a href="#"> <img
+                            src={payment2} alt="payment"/> </a> <a href="#"> <img
+                            src={payment3} alt="payment"/> </a> <a href="#"> <img
+                            src={payment4} alt="payment"/> </a></div>
                         <div className="footer-bottom-menu wow fadeInUp animated">
                             <ul className="d-flex align-items-center">
-                                <li><a href="contact.html">Sitemap</a></li>
-                                <li><a href="contact.html">Terms of Service</a></li>
-                                <li><a href="contact.html">Privacy Policy</a></li>
+                                <li><a href="#">Карта сайта</a></li>
+                                <li><a href="#">Условия</a></li>
+                                <li><a href="#">Политики конфиденциальности</a></li>
                             </ul>
                         </div>
                     </div>
