@@ -2780,7 +2780,7 @@ pagination start
     }
 
     p {
-        padding-top: 18px;
+        padding-top: 5px;
         font-size: 16px;
         line-height: 1.75; 
     }
@@ -2799,7 +2799,6 @@ pagination start
 
 .product-details-nav {
     border-top: 1px solid #dddddd;
-    padding-bottom: 45px;
 
     li {
         .nav-link {
@@ -3911,6 +3910,7 @@ pagination start
         margin-top: 21px;
     }
 }
+
 
 @media (min-width: 992px) {
     .shop-details-top-right h3 {

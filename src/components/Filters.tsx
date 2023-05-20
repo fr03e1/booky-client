@@ -1,4 +1,5 @@
 import React from 'react';
+import {Slider} from "@mui/material";
 
 const Filters:React.FC = () => {
     return (
@@ -20,9 +21,10 @@ const Filters:React.FC = () => {
                     <div className="single-sidebar-box mt-30 wow fadeInUp animated">
                         <h4>Фильтр по цене</h4>
                         <div className="slider-box">
-                            <div id="price-range" className="slider"></div>
-                            <div className="output-price"><label htmlFor="priceRange">Цена:</label> <input
-                                type="text" id="priceRange" readOnly/></div>
+                            <Slider
+                                defaultValue={30}
+                                color="primary"
+                            />
                             <button className="filterbtn"
                                     type="submit"> Выбрать
                             </button>
