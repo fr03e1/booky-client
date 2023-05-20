@@ -7,7 +7,7 @@ import CartModal from "./modals/CartModal";
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
-const Header = () => {
+const Header:React.FC = () => {
     const [active, setActive] = React.useState(false);
 
     return (

@@ -4,7 +4,7 @@ import image from "../assets/images/inner-pages/login-bg.png";
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
-const LoginPage = () => {
+const LoginPage:React.FC = () => {
 
     return (
         <main className="overflow-hidden ">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Filters = () => {
+const Filters:React.FC = () => {
     return (
         <div className="col-xl-3 col-lg-4">
             <div className="shop-grid-sidebar">

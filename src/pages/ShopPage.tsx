@@ -5,7 +5,7 @@ import Pagination from "../components/Pagination";
 import Breadcrumb from "../components/Breadcrumb";
 import ItemList from "../components/ItemList";
 
-const ShopPage = () => {
+const ShopPage:React.FC = () => {
 
 
     return (

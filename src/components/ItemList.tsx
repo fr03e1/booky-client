@@ -2,7 +2,8 @@ import React from 'react';
 import ShopItem from "./ShopItem";
 import image2 from '../assets/images/37.jpeg';
 
-const ItemList = () => {
+const ItemList:React.FC = () => {
+
     const [active, setActive] = React.useState(false);
 
     return (

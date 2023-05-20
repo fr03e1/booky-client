@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Categories = () => {
+const Categories:React.FC = () => {
     return (
         <section className="product-categories-one pb-60">
             <div className="container">

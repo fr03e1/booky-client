@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/images/inner-pages/4.png';
 
-const Breadcrumb = () => {
+const Breadcrumb:React.FC = () => {
     return (
         <div className="overflow-hidden">
             <section className="breadcrumb-area"

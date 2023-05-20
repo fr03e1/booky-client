@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../assets/images/shop/cart-product-thumb-1.jpg';
 
-const WishListPage = () => {
+const WishListPage:React.FC = () => {
     return (
         <section className="wishlist pt-120 pb-120">
             <div className="container">

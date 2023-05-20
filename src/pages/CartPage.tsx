@@ -2,7 +2,7 @@ import React from 'react';
 import image from '../assets/images/shop/cart-product-thumb-1.jpg';
 import CartModal from "../components/modals/CartModal";
 
-const CartPage = () => {
+const CartPage:React.FC = () => {
     return (
         <section className="cart-area pt-120 pb-120">
             <div className="container">

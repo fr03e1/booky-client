@@ -6,7 +6,7 @@ import payment4 from '../assets/images/payment_method/payment_4.png';
 import {ERoutes} from "../types/RouteType";
 import {Link} from "react-router-dom";
 
-const Footer = () => {
+const Footer:React.FC = () => {
 
     return (
         <footer className="footer-default footer-style-1">

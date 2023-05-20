@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AccountPage = () => {
+const AccountPage:React.FC = () => {
     return (
         <section className="my-account-page pt-120 pb-120">
             <div className="container">

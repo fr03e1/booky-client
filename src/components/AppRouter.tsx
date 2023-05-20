@@ -7,7 +7,7 @@ import {publicRoutes} from "../routes/public";
 import ErrorPage from "../pages/ErrorPage";
 
 
-const AppRouter = () => {
+const AppRouter:React.FC = () => {
    const isAuth = false; //TODO
 
     return (

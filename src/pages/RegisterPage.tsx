@@ -4,7 +4,7 @@ import Breadcrumb from "../components/Breadcrumb";
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
-const RegisterPage = () => {
+const RegisterPage:React.FC = () => {
 
     return (
         <main className="overflow-hidden ">

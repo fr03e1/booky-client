@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MobileMenu = () => {
+const MobileMenu:React.FC = () => {
     return (
         <div className="mobile-menu d-lg-none d-block">
             <div className="menu-closer"></div>

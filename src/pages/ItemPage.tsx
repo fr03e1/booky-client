@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import image from '../assets/images/37.jpeg';
-import ItemPageBottom from "../components/ItemPageComponents/ItemPageBottom";
+import ItemPageBottom from "../components/itemPageComponents/ItemPageBottom";
+import Carousel from "../components/carousel/Carousel";
 
-const ItemPage = () => {
+const ItemPage:React.FC = () => {
 
     return(
         <>
@@ -10,23 +10,7 @@ const ItemPage = () => {
             <div className="container">
                 <div className="row mt--30">
                     <div className="col-xl-3 col-lg-4 mt-30 wow fadeInUp animated">
-                        <div className="single-product-box one">
-                            <div className="big-product single-product-one slider-for">
-                                <div>
-                                    <div className="single-item"><img src={image} alt=""/>
-                                        <a href="#"
-                                           className="love"> <i className="flaticon-like"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="navholder">
-                                <div className="product-slicknav single-product-one-nav slider-nav">
-                                    <div> <span className="single-item"> <img
-                                        src="" alt=""/> </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <Carousel/>
                     </div>
                     <div className="col-xl-5"><ItemPageBottom/></div>
                     <div className="col-xl-4 col-lg-6 mt-30 wow fadeInUp animated">

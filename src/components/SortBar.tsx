@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SortBar = () => {
+const SortBar:React.FC = () => {
     return (
         <div className="row">
             <div className="col-xl-12">

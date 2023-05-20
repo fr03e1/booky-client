@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Search = () => {
+const Search:React.FC = () => {
     return (
         <>
             <div className="left d-lg-block d-none ">

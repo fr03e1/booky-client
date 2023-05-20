@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
-const ErrorPage = () => {
+const ErrorPage:React.FC = () => {
     return (
         <section className="error-page">
             <div className="container">

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const MainPage = () => {
+const MainPage:React.FC = () => {
+
     return (
         <div>
             <h1>Временное решение</h1>

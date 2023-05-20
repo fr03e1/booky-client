@@ -3,7 +3,7 @@ import {ERoutes} from "../types/RouteType";
 import {Link} from "react-router-dom";
 import CartModal from "./modals/CartModal";
 
-const NavBar = () => {
+const NavBar:React.FC = () => {
     return (
         <div className="mega-menu-default mega-menu d-lg-block d-none">
             <div className="container position-relative">
