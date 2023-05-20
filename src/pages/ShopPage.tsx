@@ -6,6 +6,8 @@ import Breadcrumb from "../components/Breadcrumb";
 import ItemList from "../components/ItemList";
 
 const ShopPage = () => {
+
+
     return (
         <div className="product-grid pt-60 pb-120">
             <div className="container">

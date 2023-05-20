@@ -31,7 +31,7 @@ const Header = () => {
                             <div className="col-4 text-center">
                                 <div className="middle">
                                     <Link to={ERoutes.MAIN_ROUTE} className="logo">
-                                        <img alt=""/><h2>Booky.</h2>
+                                        <img alt=""/>
                                     </Link></div>
                             </div>
                             <div className="col-4 text-end">
