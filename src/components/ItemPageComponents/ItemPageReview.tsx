@@ -9,39 +9,24 @@ const ItemPageReview:React.FC<ItemPageBottomProps> = ({active}) => {
                     <div className="ratting"><i className="flaticon-star-1"></i> <i
                         className="flaticon-star-1"></i> <i className="flaticon-star-1"></i> <i
                         className="flaticon-star-1"></i> <i className="flaticon-star-1"></i> <span
-                        className="ps-2">BASED ON 100 REVIEW</span></div>
+                        className="ps-2">1 отзыв</span></div>
                 </div>
                 <div className="review-single">
                     <div className="left">
                         <div className="ratting"><i className="flaticon-star-1"></i> <i
                             className="flaticon-star-1"></i> <i className="flaticon-star-1"></i> <i
                             className="flaticon-star-1"></i> <i className="flaticon-star-1"></i></div>
-                        <h6>Vary Good quality Theme <span>Raul Bates on January 28, 2022</span></h6>
-                        <p> Assertively conceptualize parallel process improvements through user
-                            friendly colighue to action items. Interactively antidos cultivate
-                            interdependent customer service without clicks-and-mortar e-services. </p>
+                        <h6>Круто<span>Fr03e 28 января 23</span></h6>
+                        <p> Очень круто </p>
                     </div>
-                    <a href="#0" className="right-box"> Report this Comments </a>
-                </div>
-                <div className="review-single">
-                    <div className="left">
-                        <div className="ratting"><i className="flaticon-star-1"></i> <i
-                            className="flaticon-star-1"></i> <i className="flaticon-star-1"></i> <i
-                            className="flaticon-star-1"></i> <i className="flaticon-star-1"></i></div>
-                        <h6> Amazing Theme <span>Kurt Morgan on January 28, 2022</span></h6>
-                        <p> Assertively conceptualize parallel process improvements through user
-                            friendly colighue to action items. Interactively antidos cultivate
-                            interdependent customer service without clicks-and-mortar e-services. </p>
-                    </div>
-                    <a href="#0" className="right-box">Report this Comments </a>
                 </div>
                 <div className="review-from-box mt-30">
-                    <h6>Write a Review</h6>
+                    <h6>Написать отзыв</h6>
                     <form action="#" className="review-from">
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="ratting-box">
-                                    <p> RATING </p>
+                                    <p> Рейтинг </p>
                                     <div className="ratting"><i className="flaticon-star-1"></i> <i
                                         className="flaticon-star-1"></i> <i className="flaticon-star-1"></i>
                                         <i className="flaticon-star-1"></i> <i
@@ -76,7 +61,7 @@ const ItemPageReview:React.FC<ItemPageBottomProps> = ({active}) => {
                                     placeholder="Write Your Comments Here"></textarea></div>
                             </div>
                         </div>
-                        <button type="submit" className="btn--primary style2 ">Submit Review
+                        <button type="submit" className="btn--primary style2 ">Отправить
                         </button>
                     </form>
                 </div>
