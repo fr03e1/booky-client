@@ -16,7 +16,6 @@ const WidgetBox: React.FC<WidgetBoxProps> = ({active, setActive}) => {
                 className="flaticon-heart"></i> </Link></li>
            <div ref={cartRef}>
                <button
-                   id="cart-btn"
                    className="cartm btn-reset"
                    onClick={() => setActive(!active)}
                ><i
