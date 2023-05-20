@@ -1,5 +1,5 @@
-import {ReactNode} from "react";
+import {ReactElement} from "react";
 
 export type CarouselProps = {
-    children: ReactNode
+    children: ReactElement[]
 }

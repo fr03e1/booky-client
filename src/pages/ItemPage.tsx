@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import ItemPageBottom from "../components/itemPageComponents/ItemPageBottom";
 import Carousel from "../components/carousel/Carousel";
+import image from '../assets/images/37.jpeg';
+import image2 from '../assets/images/12.jpeg';
 
 const ItemPage:React.FC = () => {
 
@@ -10,7 +12,10 @@ const ItemPage:React.FC = () => {
             <div className="container">
                 <div className="row mt--30">
                     <div className="col-xl-3 col-lg-4 mt-30 wow fadeInUp animated">
-                        <Carousel/>
+                        <Carousel>
+                            <img src={image}/>
+                            <img src={image2}/>
+                        </Carousel>
                     </div>
                     <div className="col-xl-5"><ItemPageBottom/></div>
                     <div className="col-xl-4 col-lg-6 mt-30 wow fadeInUp animated">
