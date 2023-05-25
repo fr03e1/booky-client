@@ -2656,6 +2656,21 @@ pagination start
 
 }
 
+.slider-field{
+    display: flex;
+}
+
+-webkit-slider-thumb:active {
+    background-color: red;
+}
+-webkit-slider-thumb,
+.custom-range:focus::-webkit-slider-thumb,
+.custom-range:focus::-moz-range-thumb,
+.custom-range:focus::-ms-thumb {
+    box-shadow: red;
+}
+
+
 .single-sidebar-box {
     .slider-box {
         .slider {
@@ -2676,6 +2691,7 @@ pagination start
         }
 
         .filterbtn {
+            margin-top: 10px;
             font-size: 16px;
             font-family: var(--font-heading-family);
             color: rgb(85, 85, 85);

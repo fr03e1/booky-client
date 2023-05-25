@@ -1,8 +1,6 @@
 import React from 'react';
-import Filters from "../components/Filters";
 import SortBar from "../components/SortBar";
 import Pagination from "../components/Pagination";
-import Breadcrumb from "../components/Breadcrumb";
 import ItemList from "../components/ItemList";
 
 const ShopPage:React.FC = () => {
@@ -12,7 +10,7 @@ const ShopPage:React.FC = () => {
         <div className="product-grid pt-60 pb-120">
             <div className="container">
                 <div className="row gx-4">
-                    <Filters/>
+
                     <div className="col-xl-9 col-lg-8">
                         <SortBar/>
                         <ItemList/>
