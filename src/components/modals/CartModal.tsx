@@ -7,17 +7,21 @@ import {popupClick} from "../../types/PopupClick";
 const CartModal: React.FC<CartModalProps> = ({active, setActive, cartRef}) => {
     const modalRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => { if(active)
-    { document.body.style.overflow = 'hidden' }
-    else { document.body.style.overflow = 'unset' } },
-        [active]);
+    useEffect(() => {
+        if(active) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'unset'
+        }
+        }, [active]);
 
 
     useEffect(() => {
         const onClick = (e: MouseEvent) => {
             const event = e as popupClick;
             if (modalRef.current && !event.composedPath().includes(modalRef.current)
-                && cartRef.current && !event.composedPath().includes(cartRef.current)) {
+                && cartRef.current && !event.composedPath().includes(cartRef.current)
+            ) {
                 setActive(false);
             }
         }

@@ -2,9 +2,9 @@ import React from 'react';
 import SortBar from "../components/SortBar";
 import Pagination from "../components/Pagination";
 import ItemList from "../components/ItemList";
+import {useGetBooksQuery} from "../services/bookService";
 
 const ShopPage:React.FC = () => {
-
 
     return (
         <div className="product-grid pt-60 pb-120">

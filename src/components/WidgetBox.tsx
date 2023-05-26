@@ -5,8 +5,9 @@ import {WidgetBoxProps} from "../types/props/WidgetBoxProps";
 import CartModal from "./modals/CartModal";
 
 const WidgetBox: React.FC<WidgetBoxProps> = ({active, setActive}) => {
-    const isAuth = true;
+    const isAuth = false;
     const cartRef = useRef<HTMLDivElement>(null);
+
 
     const box = isAuth ? (<div className="right d-flex align-items-center justify-content-end">
         <ul className="main-menu__widge-box d-flex align-items-center ">
@@ -29,13 +30,16 @@ const WidgetBox: React.FC<WidgetBoxProps> = ({active, setActive}) => {
         <div className="right d-flex align-items-center justify-content-end">
             <ul className="main-menu__widge-box d-flex align-items-center ">
                 <li className="d-lg-block d-none"><Link to={ERoutes.LOGIN_ROUTE}>Войти</Link></li>
-                <button
-                    className="cartm"
-                    onClick={() => setActive(true)}
-                ><i
-                    className="flaticon-shopping-cart"></i><span
-                    className="count">(0)</span>
-                </button>
+                <div ref={cartRef}>
+                    <button
+                        className="cartm btn-reset"
+                        onClick={() => setActive(!active)}
+                    ><i
+                        className="flaticon-shopping-cart"></i><span
+                        className="count">(0)</span>
+                    </button>
+                </div>
+                <CartModal active={active} setActive={setActive} cartRef={cartRef}/>
             </ul>
         </div>
     )

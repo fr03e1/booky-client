@@ -1,6 +1,9 @@
-export type ShopItemProps = {
+import {Image, ImageDataEntry} from "../../models/IBook";
+
+export interface ShopItemProps {
+    id: number
     title: string,
-    image: string,
     price: number,
     authors: string[],
+    images: Image,
 }

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import image from '../assets/images/shop/cart-product-thumb-1.jpg';
-import CartModal from "../components/modals/CartModal";
 
 const CartPage:React.FC = () => {
+    const divRef = useRef<HTMLDivElement>(null);
+    useEffect(()=> {
+        if(divRef.current) {
+            divRef.current.scrollIntoView();
+        }
+    },[])
+
+
     return (
         <section className="cart-area pt-120 pb-120">
             <div className="container">
-                <div className="row wow fadeInUp animated">
+                <div ref={divRef} className="row wow fadeInUp animated">
                     <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div className="cart-table-box">
                             <div className="table-outer">
