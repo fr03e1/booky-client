@@ -1,5 +1,5 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
-import {BookResponse, IBook} from "../models/IBook";
+import {BookResponse} from "../models/responses/IbookResponse";
 
 export const bookApi = createApi({
     reducerPath: 'bookApi',

@@ -1,8 +1,5 @@
-export interface BookResponse {
-    data: IBook[],
-    meta: [],
-    links: [],
-}
+import {ImageData, Images} from "./IImages";
+
 export interface IBook {
     id: number,
     title: string,
@@ -18,17 +15,7 @@ export interface IBook {
     category:[],
 }
 
-export interface ImageData {
-    data: ImageDataEntry
-}
-export interface ImageDataEntry {
-   [key:number]: Image
-}
 
-export interface Image {
-    preview: string,
-    image2: string,
-    image3: string,
-    image4: string,
-}
+
+
 

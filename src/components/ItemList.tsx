@@ -1,6 +1,5 @@
 import React from 'react';
 import ShopItem from "./ShopItem";
-import image2 from '../assets/images/37.jpeg';
 import {useGetBooksQuery} from "../services/bookService";
 
 const ItemList:React.FC = () => {

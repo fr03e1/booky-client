@@ -12,6 +12,7 @@ const ShopItem: React.FC<ShopItemProps> = (
         images
     }
 ) => {
+
     return (
 
         <div className="col-xl-3 col-lg-6 col-6 ">
