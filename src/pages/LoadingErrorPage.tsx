@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
-const ErrorPage:React.FC = () => {
+const LoadingErrorPage = () => {
     return (
         <section className="error-page">
             <div className="container">
@@ -13,9 +13,8 @@ const ErrorPage:React.FC = () => {
                                                                               alt=""/>
                             </div>
                             <div className="error-page__content wow fadeInUp animated">
-                                <h3>Упс! Такая страница не найдена.</h3>
-                                <p>Похоже ничего не было найдено. Может попробовать одну из ссылок ниже?</p>
-                                <div className="btn-box"><Link to={ERoutes.MAIN_ROUTE} className="btn--primary style2">На главную</Link></div>
+                                <h3>Ошибка при загрузке.</h3>
+                                <p>Попробуйте позже</p>
                             </div>
                         </div>
                     </div>
@@ -25,4 +24,4 @@ const ErrorPage:React.FC = () => {
     );
 };
 
-export default ErrorPage;
+export default LoadingErrorPage;

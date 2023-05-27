@@ -1,10 +1,12 @@
 import React from 'react';
 import ShopItem from "./ShopItem";
 import {useGetBooksQuery} from "../services/bookService";
+import LoadingErrorPage from "../pages/LoadingErrorPage";
 
 const ItemList:React.FC = () => {
     const {data,error,isLoading} = useGetBooksQuery("");
 
+    if(error) return <LoadingErrorPage/>
     return (
         <>
             {isLoading ? <h1>Loading</h1> : ( <div className="row">

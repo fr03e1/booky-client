@@ -1,10 +1,12 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import {bookApi} from "../services/bookService";
 import bookSlice from "./slices/bookSlice";
+import filterSlice from './slices/filterSlice'
 
 const rootReducer = combineReducers({
     bookSlice,
-    [bookApi.reducerPath]: bookApi.reducer
+    [bookApi.reducerPath]: bookApi.reducer,
+    filterSlice
 })
 
 export const setupStore = () => {

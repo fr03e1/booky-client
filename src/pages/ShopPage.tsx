@@ -2,7 +2,8 @@ import React from 'react';
 import SortBar from "../components/SortBar";
 import Pagination from "../components/Pagination";
 import ItemList from "../components/ItemList";
-import Filters from "../components/filters/Filters";
+import Filters from "../components/Filters";
+
 
 const ShopPage:React.FC = () => {
 
@@ -11,7 +12,7 @@ const ShopPage:React.FC = () => {
             <div className="container">
                 <div className="row gx-4">
                     <Filters/>
-                    <div className="col-xl-9 col-lg-8">
+                    <div className="col-xl-9 col-lg-8" >
                         <SortBar/>
                         <ItemList/>
                         <Pagination/>
