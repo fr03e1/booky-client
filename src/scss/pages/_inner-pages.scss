@@ -2501,9 +2501,9 @@ pagination start
         }
     }
 
+
     .checkbox-item {
         position: relative;
-
         .form-group {
             display: block;
             margin-bottom: 10px;
@@ -2690,25 +2690,6 @@ pagination start
             }
         }
 
-        .filterbtn {
-            margin-top: 10px;
-            font-size: 16px;
-            font-family: var(--font-heading-family);
-            color: rgb(85, 85, 85);
-            border: 1px solid rgb(238, 238, 238);
-            padding: 10px 30px 10px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.3s;
-            background: transparent;
-
-            &:hover {
-                background: var(--thm-black);
-                color: var(--thm-white);
-                border: 1px solid var(--thm-black);
-            }
-        }
 
         .ui-widget.ui-widget-content {
             height: 5px;
@@ -2736,6 +2717,26 @@ pagination start
             transform: translateY(-50%);
             margin: 0px;
         }
+    }
+}
+
+.filterbtn {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: var(--font-heading-family);
+    color: rgb(85, 85, 85);
+    border: 1px solid rgb(238, 238, 238);
+    padding: 10px 30px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    background: transparent;
+
+    &:hover {
+        background: var(--thm-black);
+        color: var(--thm-white);
+        border: 1px solid var(--thm-black);
     }
 }
 

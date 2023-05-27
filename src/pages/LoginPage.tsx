@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import Breadcrumb from "../components/Breadcrumb";
 import image from "../assets/images/inner-pages/login-bg.png";
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
 
 const LoginPage:React.FC = () => {
+    const divRef = useRef<HTMLDivElement>(null);
+
+    useEffect(()=> {
+        if(divRef.current) {
+            divRef.current.scrollIntoView();
+        }
+    },[])
 
     return (
         <main className="overflow-hidden ">
-            <Breadcrumb/>
             <section className="login-page pt-120 pb-120">
                 <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col-xl-6 col-lg-8 col-md-9 wow fadeInUp animated">
-                            <div className="login-register-form"
+                    <div ref={divRef} className="row justify-content-center">
+                        <div  className="col-xl-6 col-lg-8 col-md-9 wow fadeInUp animated">
+                            <div  className="login-register-form"
                                  style={{backgroundImage: `url${image}`}}
                             >
-                                <div className="top-title text-center ">
+                                <div  className="top-title text-center ">
                                     <h2>Войти</h2>
                                     <p>У вас нет аккаунта? <Link to={ERoutes.REGISTRATION_ROUTE}>Зарегестрироваться</Link></p>
                                 </div>

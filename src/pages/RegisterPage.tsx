@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import image from '../assets/images/inner-pages/login-bg.png';
 import Breadcrumb from "../components/Breadcrumb";
 import {Link} from "react-router-dom";
@@ -6,9 +6,9 @@ import {ERoutes} from "../types/RouteType";
 
 const RegisterPage:React.FC = () => {
 
+
     return (
         <main className="overflow-hidden ">
-            <Breadcrumb/>
             <section className="login-page pt-120 pb-120">
                 <div className="container">
                     <div className="row justify-content-center">

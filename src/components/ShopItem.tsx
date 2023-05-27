@@ -1,20 +1,28 @@
 import React from 'react';
-import {ShopItemProps} from "../types/props/ShopItemProps";
-import image from '../assets/images/37.jpeg';
+
 import {Link} from "react-router-dom";
 import {ERoutes} from "../types/RouteType";
+import {ShopItemProps} from "../types/props/ShopItemProps";
 
-const ShopItem: React.FC<ShopItemProps> = ({title, authors, price}) => {
+const ShopItem: React.FC<ShopItemProps> = (
+    {
+        title,
+        price,
+        authors,
+        images
+    }
+) => {
+
     return (
 
         <div className="col-xl-3 col-lg-6 col-6 ">
             <div className="products-three-single w-100 h-300 mt-30">
                 <div className="products-three-single-img">
                     <img
-                        src={image}
+                        src={images.preview}
                         className="first-img" alt=""/>
                     <img
-                        src={image}
+                        src={images.preview}
                         alt="" className="hover-img"/>
                     <a href="#" className="addcart btn--primary style2">
                         В корзину </a>
@@ -33,7 +41,7 @@ const ShopItem: React.FC<ShopItemProps> = ({title, authors, price}) => {
                     <h5><Link to={ERoutes.ITEM_ROUTE + '/1'}> {title} </Link>
                     </h5>
                     <p>
-                        1500 Р
+                        {price} Р
                     </p>
                 </div>
             </div>
