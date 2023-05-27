@@ -1,7 +1,7 @@
 import styles from './carousel.module.scss';
-import {CarouselProps} from "../../types/props/CarouselProps";
 import React, {Children, cloneElement, useEffect} from "react";
 import {FaChevronCircleLeft, FaChevronCircleRight} from "react-icons/fa";
+import {CarouselProps} from "../../models/types/props/CarouselProps";
 
 const PAGE_WIDTH = 233;
 

@@ -3,20 +3,14 @@ import CustomSelect from "./CustomSelect";
 import CustomRangeSlider from "./CustomRangeSlider";
 import axios from "axios";
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
+import {getFilters} from "../services/axios/actions";
 
 const Filters: React.FC = () => {
     const dispatch = useAppDispatch();
     const {authors} = useAppSelector(state => state.filterSlice);
     const [filterAuthors,setFilterAuthors] = useState([{id:1,author:'Пушкин'}])
 
-    useEffect(()=>  {
-        axios.get('http://localhost:80/api/filters').then(res => {
-            setFilterAuthors(res.data.authors)
-        })
-    },[setFilterAuthors]);
-
-    console.log(filterAuthors)
-
+    console.log(process.env.REACT_APP_SERVER_URL);
     return (
         <div className="col-xl-3 col-lg-4">
             <div className="shop-grid-sidebar">

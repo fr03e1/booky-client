@@ -1,11 +1,10 @@
 import React, {useEffect, useRef} from 'react';
 import image from '../assets/images/inner-pages/login-bg.png';
-import Breadcrumb from "../components/Breadcrumb";
 import {Link} from "react-router-dom";
-import {ERoutes} from "../types/RouteType";
+import {ERoutes} from "../models/types/RouteType";
+
 
 const RegisterPage:React.FC = () => {
-
 
     return (
         <main className="overflow-hidden ">

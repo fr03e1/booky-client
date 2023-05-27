@@ -3,8 +3,8 @@ import payment1 from '../assets/images/payment_method/payment_1.png';
 import payment2 from '../assets/images/payment_method/payment_2.png';
 import payment3 from '../assets/images/payment_method/payment_3.png';
 import payment4 from '../assets/images/payment_method/payment_4.png';
-import {ERoutes} from "../types/RouteType";
 import {Link} from "react-router-dom";
+import {ERoutes} from "../models/types/RouteType";
 
 const Footer:React.FC = () => {
 

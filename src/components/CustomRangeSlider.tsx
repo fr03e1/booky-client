@@ -1,6 +1,7 @@
 import React from 'react';
 import {Slider} from "@mui/material";
-import {CustomRangeSliderProps} from "../types/props/CustomRangeSliderProps";
+import {CustomRangeSliderProps} from "../models/types/props/CustomRangeSliderProps";
+
 
 const CustomRangeSlider:React.FC<CustomRangeSliderProps> = ({name}) => {
     return (

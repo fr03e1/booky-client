@@ -1,4 +1,4 @@
-import {Images} from "../../models/IImages";
+import {Images} from "../../IImages";
 
 
 export interface ShopItemProps {

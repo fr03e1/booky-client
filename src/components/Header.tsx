@@ -3,9 +3,9 @@ import React, {useEffect, useRef} from "react";
 import Search from "./Search";
 import MobileMenu from "./MobileMenu";
 import WidgetBox from "./WidgetBox";
-import CartModal from "./modals/CartModal";
 import {Link} from "react-router-dom";
-import {ERoutes} from "../types/RouteType";
+import {ERoutes} from "../models/types/RouteType";
+
 
 const Header:React.FC = () => {
     const [active, setActive] = React.useState(false);

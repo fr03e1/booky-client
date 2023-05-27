@@ -1,8 +1,9 @@
 import React from 'react';
 
 import {Link} from "react-router-dom";
-import {ERoutes} from "../types/RouteType";
-import {ShopItemProps} from "../types/props/ShopItemProps";
+import {ShopItemProps} from "../models/types/props/ShopItemProps";
+import {ERoutes} from "../models/types/RouteType";
+
 
 const ShopItem: React.FC<ShopItemProps> = (
     {

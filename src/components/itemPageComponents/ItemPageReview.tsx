@@ -1,5 +1,6 @@
 import React from 'react';
-import {ItemPageBottomProps} from "../../types/props/ItemPageBottomProps";
+import {ItemPageBottomProps} from "../../models/types/props/ItemPageBottomProps";
+
 
 const ItemPageReview:React.FC<ItemPageBottomProps> = ({active}) => {
     return (
