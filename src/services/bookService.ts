@@ -1,5 +1,6 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
-import {BookResponse} from "../models/responses/IbookResponse";
+import {FilterResponse} from "../models/http/FilterResponse";
+import {BookResponse} from "../models/http/BookResponse";
 
 export const bookApi = createApi({
     reducerPath: 'bookApi',
@@ -8,10 +9,22 @@ export const bookApi = createApi({
         getBooks: builder.query<BookResponse,string>({
             query: () => ({
                 url: '/books',
-                method: 'POST'
+                method: 'Post'
+            }),
+        }),
+        getFilters: builder.query<FilterResponse,string>({
+            query: () => ({
+                url: '/filters',
             }),
         })
     })
 })
 
-export const {useGetBooksQuery} = bookApi
+export const {
+    useGetFiltersQuery,
+    useGetBooksQuery,
+} = bookApi;
+
+export const {
+    getFilters,
+} = bookApi.endpoints

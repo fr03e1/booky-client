@@ -1,4 +1,10 @@
+import {IAuthor} from "../../IAuthor";
+
 export type CustomSelectProps = {
     name: string,
-    //options: [],
+    authors?: IAuthor[]
+}
+export type SelectOptions = {
+    label: number;
+    value: string
 }

@@ -25,6 +25,7 @@ const ItemPageBottom: React.FC = () => {
         setActiveDescription(false)
         setActiveReviews(false)
     }
+
     return (
         <section className="product pt-20 pb-60 wow fadeInUp overflow-hidden ">
             <div className="container">

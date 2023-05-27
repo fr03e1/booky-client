@@ -3,8 +3,6 @@ import {Link} from "react-router-dom";
 import {ERoutes} from "../../models/types/RouteType";
 import {ShopItemProps} from "../../models/types/props/ShopItemProps";
 
-
-
 const ShopItem: React.FC<ShopItemProps> = (
     {
         title,

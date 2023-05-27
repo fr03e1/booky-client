@@ -24,7 +24,7 @@ const filterSlice = createSlice({
             state.categories.push(...action.payload);
         },
         setAuthorId(state, action: PayloadAction<number[]>) {
-            state.authors.push(...action.payload)
+            state.authors = action.payload;
         },
         setSorting(state, action: PayloadAction<string>) {
             state.sorting = action.payload

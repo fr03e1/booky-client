@@ -1,9 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Filters from "../components/Filters/Filters";
 import SortBar from "../components/SortBar/SortBar";
 import ItemList from "../components/ItemList/ItemList";
 import Pagination from "../components/Pagination/Pagination";
-
 
 const ShopPage:React.FC = () => {
 
