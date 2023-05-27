@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from "react-select";
-import {CustomSelectProps} from "../models/types/props/CustomSelectProps";
+import {CustomSelectProps} from "../../models/types/props/CustomSelectProps";
 
 const CustomSelect:React.FC<CustomSelectProps> = ({name}) => {
 

@@ -1,9 +1,8 @@
 import React, {useState} from 'react';
-import ItemPageBottom from "../components/itemPageComponents/ItemPageBottom";
-import Carousel from "../components/carousel/Carousel";
+import ItemPageBottom from "../components/ItemPageComponents/ItemPageBottom";
+import Carousel from "../components/Carousel/Carousel";
 import image from '../assets/images/37.jpeg';
 import image2 from '../assets/images/12.jpeg';
-import Breadcrumb from "../components/Breadcrumb";
 
 const ItemPage:React.FC = () => {
 

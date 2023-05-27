@@ -1,7 +1,7 @@
 import React from 'react';
-
 import {Link} from "react-router-dom";
-import {ERoutes} from "../models/types/RouteType";
+import {ERoutes} from "../../../../models/types/RouteType";
+
 
 const NavBar:React.FC = () => {
     return (

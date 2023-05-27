@@ -1,8 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import {Link, useNavigate} from "react-router-dom";
-import CartModal from "./modals/CartModal";
-import {ERoutes} from "../models/types/RouteType";
-import {WidgetBoxProps} from "../models/types/props/WidgetBoxProps";
+import {ERoutes} from "../../../../models/types/RouteType";
+import {WidgetBoxProps} from "../../../../models/types/props/WidgetBoxProps";
+import CartModal from "../../../Modals/CartModal/CartModal";
 
 const WidgetBox: React.FC<WidgetBoxProps> = ({active, setActive}) => {
     const isAuth = false;

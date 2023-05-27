@@ -1,8 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import {Link} from "react-router-dom";
-import {CartModalProps} from "../../models/types/props/CartModalProps";
-import {popupClick} from "../../models/types/PopupClick";
-import {ERoutes} from "../../models/types/RouteType";
+import {CartModalProps} from "../../../models/types/props/CartModalProps";
+import {popupClick} from "../../../models/types/PopupClick";
+import {ERoutes} from "../../../models/types/RouteType";
 
 
 const CartModal: React.FC<CartModalProps> = ({active, setActive, cartRef}) => {

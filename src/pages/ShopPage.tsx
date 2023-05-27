@@ -1,8 +1,8 @@
 import React from 'react';
-import SortBar from "../components/SortBar";
-import Pagination from "../components/Pagination";
-import ItemList from "../components/ItemList";
-import Filters from "../components/Filters";
+import Filters from "../components/Filters/Filters";
+import SortBar from "../components/SortBar/SortBar";
+import ItemList from "../components/ItemList/ItemList";
+import Pagination from "../components/Pagination/Pagination";
 
 
 const ShopPage:React.FC = () => {

@@ -3,8 +3,8 @@ import './scss/style.scss';
 import './style.css';
 import './assets/bootstrap.5.1.1.min.css'
 import './assets/fonts/flaticon.scss';
+import AppRouter from "./components/AppRouter/AppRouter";
 
-import AppRouter from "./components/AppRouter";
 
 function App() {
   return (

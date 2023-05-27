@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import ItemPageDescription from "./ItemPageDescription";
 import ItemPageReview from "./ItemPageReview";
-import Breadcrumb from "../Breadcrumb";
 import ItemPageDetails from "./ItemPageDetails";
 
 const ItemPageBottom: React.FC = () => {

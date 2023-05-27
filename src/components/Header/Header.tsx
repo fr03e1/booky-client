@@ -1,10 +1,10 @@
-import NavBar from './NavBar';
 import React, {useEffect, useRef} from "react";
-import Search from "./Search";
-import MobileMenu from "./MobileMenu";
-import WidgetBox from "./WidgetBox";
 import {Link} from "react-router-dom";
-import {ERoutes} from "../models/types/RouteType";
+import MobileMenu from "./components/MobileMenu/MobileMenu";
+import Search from "./components/Search/Search";
+import {ERoutes} from "../../models/types/RouteType";
+import WidgetBox from "./components/WidgetBox/WidgetBox";
+import NavBar from "./components/NavBar/NavBar";
 
 
 const Header:React.FC = () => {
@@ -12,15 +12,7 @@ const Header:React.FC = () => {
 
     return (
         <header className="header-default">
-
             <div className="menubox">
-                <div className="top-info d-flex">
-                    <div className="container">
-                        <div className="row g-0 ">
-
-                        </div>
-                    </div>
-                </div>
                 <MobileMenu/>
                 <div className="main-menu">
                     <div className="container">
@@ -32,7 +24,8 @@ const Header:React.FC = () => {
                                 <div className="middle">
                                     <Link to={ERoutes.MAIN_ROUTE} className="logo">
                                         <img alt=""/>
-                                    </Link></div>
+                                    </Link>
+                                </div>
                             </div>
                             <div className="col-4 text-end">
                                 <WidgetBox active={active} setActive={setActive}/>

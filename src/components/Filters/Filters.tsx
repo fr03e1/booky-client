@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import CustomSelect from "./CustomSelect";
-import CustomRangeSlider from "./CustomRangeSlider";
-import axios from "axios";
-import {useAppDispatch, useAppSelector} from "../hooks/redux";
-import {getFilters} from "../services/axios/actions";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import CustomSelect from "../CustomSelect/CustomSelect";
+import CustomRangeSlider from "../CustomRangeSlider/CustomRangeSlider";
+
 
 const Filters: React.FC = () => {
     const dispatch = useAppDispatch();
     const {authors} = useAppSelector(state => state.filterSlice);
     const [filterAuthors,setFilterAuthors] = useState([{id:1,author:'Пушкин'}])
 
-    console.log(process.env.REACT_APP_SERVER_URL);
     return (
         <div className="col-xl-3 col-lg-4">
             <div className="shop-grid-sidebar">

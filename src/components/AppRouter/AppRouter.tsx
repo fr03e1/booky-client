@@ -1,10 +1,9 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import ShopPage from "../pages/ShopPage";
-import Layout from "../pages/Layout";
-import {authRoutes} from "../routes/auth";
-import {publicRoutes} from "../routes/public";
-import ErrorPage from "../pages/ErrorPage";
+import Layout from "../Layout/Layout";
+import {authRoutes} from "../../routes/auth";
+import {publicRoutes} from "../../routes/public";
+import ErrorPage from "../../pages/ErrorPage";
 
 
 const AppRouter:React.FC = () => {
