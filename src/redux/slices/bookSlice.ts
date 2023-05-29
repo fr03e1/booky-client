@@ -27,13 +27,15 @@ const initialState:BookSliceState = {
 export const fetchBooks = createAsyncThunk(
     'books/fetchBooks',
     async (params: BookRequest,{dispatch}) => {
-        const {authors,publishers,year, price,pages} = params;
+        const {authors,publishers,year, price,pages,sortBy,order} = params;
         const {data} = await axios.post('http://localhost:80/api/books',{
             authors: authors,
             publishers: publishers,
             year: year,
             price: price,
-            pages: pages
+            pages: pages,
+            sorting: sortBy,
+            order: order
         })
         return data;
     }

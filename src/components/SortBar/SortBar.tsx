@@ -1,6 +1,6 @@
 import React from 'react';
 import {useAppDispatch} from "../../hooks/redux";
-import {setPagination} from "../../redux/slices/filterSlice";
+import {setPagination,setSorting} from "../../redux/slices/filterSlice";
 
 export type SortItem = {
     id: number,
@@ -27,13 +27,34 @@ const optionsPagination:Pagination[] = [
     }
 ]
 
+const optionsSorting:SortItem[] = [{
+    id: 1,
+    title: 'По алфавиту А-Я',
+    value: 'title'
+},
+    {
+        id: 2,
+        title: 'По цене(Возрст)',
+        value: 'price',
+    },{
+        id: 3,
+        title: 'По алфавиту Я-А',
+        value: 'title-'
+    },
+    {
+        id: 4,
+        title: 'По цене(Убыв)',
+        value: 'price-',
+    }
+]
+
 const SortBar:React.FC = () => {
 
     const dispatch = useAppDispatch();
 
-    // const handleSorting = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    //     dispatch(setSorting(event.target.value))
-    // }
+    const handleSorting = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        dispatch(setSorting(event.target.value))
+    }
     const handlePagination = (event: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(setPagination(event.target.value))
     }
@@ -58,12 +79,10 @@ const SortBar:React.FC = () => {
                     <div
                         className="right-box justify-content-md-between justify-content-center wow fadeInUp animated">
                         <div className="short-by pe-5">
-                            <div className="select-box"><select className="wide">
-                                <option value="2">По Алфавиту, А-Я</option>
-                                <option value="3">По Алфавиту, Я-А</option>
-                                <option value="3">По цене, по возрт.</option>
-                                <option value="3">По цене, по убыванию.</option>
-                                <option value="3">По дате, по убыванию</option>
+                            <div className="select-box"><select onChange={handleSorting} className="wide">
+                                {optionsSorting.map((obj) => (
+                                    <option key={obj.id} value={obj.value}>{obj.title}</option>
+                                ))}
                             </select></div>
                         </div>
                         <div
