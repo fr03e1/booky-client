@@ -10,6 +10,7 @@ interface IFilterSliceState {
     price: number[],
     pages: number,
     sorting: string,
+    page: number,
 
 }
 
@@ -19,7 +20,8 @@ const initialState: IFilterSliceState = {
     year: [],
     price: [],
     pages: 8,
-    sorting: 'title'
+    sorting: 'title',
+    page: 1
 }
 
 const filterSlice = createSlice({
@@ -43,10 +45,21 @@ const filterSlice = createSlice({
         },
         setSorting(state,action) {
             state.sorting = action.payload
+        },
+        setPage(state,action) {
+            state.page = action.payload
         }
 
     }
 });
 
 export default filterSlice.reducer;
-export const {setAuthorId,setPublisherId,dispYear,dispPrice,setPagination,setSorting} = filterSlice.actions;
+export const {
+    setAuthorId,
+    setPublisherId,
+    dispYear,
+    dispPrice,
+    setPagination,
+    setSorting,
+    setPage,
+} = filterSlice.actions;

@@ -10,12 +10,12 @@ const ItemList:React.FC = () => {
     // const {data,error,isLoading} = useGetBooksQuery("");
     // if(error) return <LoadingErrorPage/>
     const {items} = useAppSelector(state => state.bookSlice);
-    const {authors,price,year,publishers,pages,sorting} = useAppSelector(state => state.filterSlice);
+    const {authors,price,year,publishers,pages,sorting,page} = useAppSelector(state => state.filterSlice);
     useEffect(()=>{
         const sortBy = sorting.replace("-", "");
         const order = sorting.includes("-") ? "asc" : "desc";
-        dispatch(fetchBooks({authors,price, year, publishers,pages, sortBy,order}))
-    },[authors,price,year,publishers,pages])
+        dispatch(fetchBooks({authors,price, year, publishers,pages, sortBy,order,page}))
+    },[authors,price,year,publishers,pages,page])
 
     return (
         <>

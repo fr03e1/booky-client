@@ -6,5 +6,5 @@ export interface BookRequest {
     pages: number,
     sortBy: string,
     order: string,
-    //page: number,
+    page: number,
 }

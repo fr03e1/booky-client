@@ -27,7 +27,7 @@ const initialState:BookSliceState = {
 export const fetchBooks = createAsyncThunk(
     'books/fetchBooks',
     async (params: BookRequest,{dispatch}) => {
-        const {authors,publishers,year, price,pages,sortBy,order} = params;
+        const {authors,publishers,year, price,pages,sortBy,order,page} = params;
         const {data} = await axios.post('http://localhost:80/api/books',{
             authors: authors,
             publishers: publishers,
@@ -35,8 +35,14 @@ export const fetchBooks = createAsyncThunk(
             price: price,
             pages: pages,
             sorting: sortBy,
-            order: order
+            order: order,
+            page: page
         })
+
+        dispatch(setLinks(data.meta.links))
+        dispatch(setCurrentPage(data.meta.current_page))
+        dispatch(setLastPage(data.meta.last_page))
+
         return data;
     }
 )
@@ -45,8 +51,9 @@ const booksSlice = createSlice(({
     name: 'books',
     initialState,
     reducers: {
-       setItems(state,action) {
-
+        setItems(state,action) {
+            state.items = action.payload
+            state.status = EStatus.SUCCESS
         },
         setLinks(state,action) {
             state.links = action.payload
@@ -56,7 +63,7 @@ const booksSlice = createSlice(({
         },
         setLastPage(state,action) {
             state.last_page = action.payload
-        }
+        },
     },
     extraReducers: (builder) => {
         builder.addCase(fetchBooks.pending,(state,action) => {
@@ -73,4 +80,9 @@ const booksSlice = createSlice(({
 }))
 
 export default booksSlice.reducer;
-export const {setItems,setLinks,setCurrentPage,setLastPage} = booksSlice.actions;
+export const {
+    setItems,
+    setLinks,
+    setCurrentPage,
+    setLastPage
+} = booksSlice.actions;
