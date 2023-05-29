@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Filters from "../components/Filters/Filters";
 import SortBar from "../components/SortBar/SortBar";
 import ItemList from "../components/ItemList/ItemList";

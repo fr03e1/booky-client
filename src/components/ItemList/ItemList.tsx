@@ -1,21 +1,24 @@
-import React from 'react';
-import {useGetBooksQuery} from "../../services/bookService";
+import React, {useEffect} from 'react';
 import LoadingErrorPage from "../../pages/LoadingErrorPage";
 import ShopItem from "../ShopItem/ShopItem";
-import {useAppSelector} from "../../hooks/redux";
+import {useAppDispatch, useAppSelector} from "../../hooks/redux";
+import axios from "axios";
+import {fetchBooks, setItems} from "../../redux/slices/bookSlice";
 
 const ItemList:React.FC = () => {
-    const {authors} = useAppSelector(state => state.filterSlice)
-
-    const {data,error,isLoading} = useGetBooksQuery("");
-
-
-    if(error) return <LoadingErrorPage/>
+    const dispatch = useAppDispatch();
+    // const {data,error,isLoading} = useGetBooksQuery("");
+    // if(error) return <LoadingErrorPage/>
+    const {items} = useAppSelector(state => state.bookSlice);
+    const {authors,price,year,publishers,pages} = useAppSelector(state => state.filterSlice);
+    useEffect(()=>{
+        dispatch(fetchBooks({authors: authors,price: price, year:year, publishers:publishers,pages:pages}))
+    },[authors,price,year,publishers,pages])
 
     return (
         <>
-            {isLoading ? <h1>Loading</h1> : ( <div className="row">
-                {data && data.data.map(book =>
+            <div className="row">
+                {items && items.map(book =>
                     <ShopItem
                         key={book.id}
                         id={book.id}
@@ -25,7 +28,7 @@ const ItemList:React.FC = () => {
                         images={book.images['data'][0]}
                     />
                 )}
-            </div>)}
+            </div>
         </>
     );
 };

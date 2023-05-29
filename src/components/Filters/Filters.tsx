@@ -1,14 +1,12 @@
-import React, {FormEventHandler, useEffect, useState} from 'react';
-import { useGetFiltersQuery} from "../../services/bookService";
+import React, {useEffect, useState} from 'react';
 import {formatAuthorOptions, formatPrice, formatPublisherOptions, formatYear} from "../../helpers/helpers";
 import Select, {SingleValue} from "react-select";
 import {Slider} from "@mui/material";
 import {useAppDispatch} from "../../hooks/redux";
-import {setAuthorId} from "../../redux/slices/filterSlice";
+import {setAuthorId,setPublisherId,dispYear,dispPrice} from "../../redux/slices/filterSlice";
+import {getFilters} from "../../http/actions";
 
 const Filters: React.FC = () => {
-    const {data} = useGetFiltersQuery("");
-    const dispatch = useAppDispatch();
     const [authorsOptions,setAuthorsOptions] = useState([{value:1,label:'2'}]);
     const [publisherOptions,setPublisherOptions] = useState([{value:1,label:'2'}]);
     const [priceValue,setPriceValue] = useState<number[]|number>([0,1500]);
@@ -16,6 +14,8 @@ const Filters: React.FC = () => {
     const [yearValue,setYearValue] = useState<number[]|number>([0,1500]);
     const [year,setYear] = useState([0,100])
     const [author,setAuthor] = useState(0)
+    const [publisher,setPublisher] = useState(0)
+    const dispatch = useAppDispatch();
 
     const valueText = (value:number) => `${value}`
 
@@ -30,28 +30,40 @@ const Filters: React.FC = () => {
     const handleAuthor = (selected: SingleValue<{ value: number; label: string; }>) => {
         setAuthor(selected!.value)
     }
+    const handlePublishers = (selected: SingleValue<{ value: number; label: string; }>) => {
+        setPublisher(selected!.value)
+    }
 
     useEffect(()=>{
-        if(data && data.authors && data.publishers) {
-            setAuthorsOptions(formatAuthorOptions(data.authors))
-            setPublisherOptions(formatPublisherOptions(data.publishers))
-        }
-        if(data && data.price) {
-            setPrice(formatPrice(data.price))
-            setPriceValue(formatPrice(data.price))
-        }
+       getFilters().then(data => {
+            if (data && data.authors && data.publishers) {
+                setAuthorsOptions(formatAuthorOptions(data.authors))
+                setPublisherOptions(formatPublisherOptions(data.publishers))
+            }
+            if (data && data.price) {
+                setPrice(formatPrice(data.price))
+                setPriceValue(formatPrice(data.price))
+            }
 
-        if(data && data.year) {
-            setYear(formatYear(data.year))
-            setYearValue(formatYear(data.year))
-        }
-    },[data])
+            if (data && data.year) {
+                setYear(formatYear(data.year))
+                setYearValue(formatYear(data.year))
+            }
+        })
+    },[])
 
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         if(author != 0) {
             dispatch(setAuthorId([author]))
         }
+        if(publisher != 0) {
+            dispatch(setPublisherId([publisher]))
+        }
+
+        dispatch(dispYear(year))
+        dispatch(dispPrice(price))
+
     }
 
     return (
@@ -70,7 +82,7 @@ const Filters: React.FC = () => {
                         <div className="single-sidebar-box mt-30 wow fadeInUp animated">
                             <h4>Издательство</h4>
                             <div className="checkbox-item">
-                                <Select options={publisherOptions}/>
+                                <Select onChange={handlePublishers} options={publisherOptions}/>
                             </div>
                         </div>
                         <div className="single-sidebar-box mt-30 wow fadeInUp animated">

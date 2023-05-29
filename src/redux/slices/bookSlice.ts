@@ -1,6 +1,8 @@
-import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import axios, {AxiosRequestConfig} from "axios";
+import {AsyncThunkAction, createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
+import axios from "axios";
+import {EStatus} from "../../models/EStatus";
 import {IBook} from "../../models/IBook";
+import {BookRequest} from "../../models/http/BookRequest";
 
 type Links = {
     label: number
@@ -8,51 +10,41 @@ type Links = {
 
 interface BookSliceState {
     items: IBook[] ,
+    status: EStatus,
     links: Links[],
     current_page: number,
     last_page:number,
 }
 const initialState:BookSliceState = {
     items:[],
+    status: EStatus.LOADING,
     links: [],
     current_page: 1,
     last_page:1
 }
 
-interface BookParams {
-    categories: number[],
-    authors: number[],
-    sortBy: string,
-    order: string,
-    pages:string,
-    page: number
-}
 
-export const getBooks = createAsyncThunk(
-    'book/getBooks',
-    async (params:BookParams,{dispatch})=>{
-        const {sortBy,categories,authors,order,pages,page} = params;
-        const {data} = await axios.post('http://localhost:80/api', {
-            categories: categories,
+export const fetchBooks = createAsyncThunk(
+    'books/fetchBooks',
+    async (params: BookRequest,{dispatch}) => {
+        const {authors,publishers,year, price,pages} = params;
+        const {data} = await axios.post('http://localhost:80/api/books',{
             authors: authors,
-            sorting: sortBy,
-            order: order,
-            pages: pages,
-            page:page
-
+            publishers: publishers,
+            year: year,
+            price: price,
+            pages: pages
         })
-        dispatch(setLinks(data.meta.links))
-        dispatch(setCurrentPage(data.meta.current_page))
-        dispatch(setLastPage(data.meta.last_page))
         return data;
-    })
+    }
+)
 
-const booksSlice = createSlice({
-    name: 'book',
+const booksSlice = createSlice(({
+    name: 'books',
     initialState,
     reducers: {
-        setItems(state,action) {
-            state.items = action.payload
+       setItems(state,action) {
+
         },
         setLinks(state,action) {
             state.links = action.payload
@@ -64,17 +56,19 @@ const booksSlice = createSlice({
             state.last_page = action.payload
         }
     },
-
     extraReducers: (builder) => {
-        builder.addCase(getBooks.pending, (state) => {
+        builder.addCase(fetchBooks.pending,(state,action) => {
+            state.status = EStatus.LOADING;
         });
-        builder.addCase(getBooks.fulfilled, (state,action:any) => {
+        builder.addCase(fetchBooks.fulfilled, (state,action:any) => {
+            state.status = EStatus.SUCCESS;
             state.items = action.payload.data
         });
-        builder.addCase(getBooks.rejected, (state,action) => {
+        builder.addCase(fetchBooks.rejected, (state,action) => {
+            state.status = EStatus.ERROR
         });
-    },
-});
+    }
+}))
 
 export default booksSlice.reducer;
 export const {setItems,setLinks,setCurrentPage,setLastPage} = booksSlice.actions;
