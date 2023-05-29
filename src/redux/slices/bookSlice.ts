@@ -23,7 +23,6 @@ const initialState:BookSliceState = {
     last_page:1
 }
 
-
 export const fetchBooks = createAsyncThunk(
     'books/fetchBooks',
     async (params: BookRequest,{dispatch}) => {

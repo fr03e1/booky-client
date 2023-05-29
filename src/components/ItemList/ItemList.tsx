@@ -1,14 +1,11 @@
 import React, {useEffect} from 'react';
-import LoadingErrorPage from "../../pages/LoadingErrorPage";
 import ShopItem from "../ShopItem/ShopItem";
 import {useAppDispatch, useAppSelector} from "../../hooks/redux";
-import axios from "axios";
-import {fetchBooks, setItems} from "../../redux/slices/bookSlice";
+import {fetchBooks} from "../../redux/slices/bookSlice";
 
 const ItemList:React.FC = () => {
     const dispatch = useAppDispatch();
-    // const {data,error,isLoading} = useGetBooksQuery("");
-    // if(error) return <LoadingErrorPage/>
+
     const {items} = useAppSelector(state => state.bookSlice);
     const {authors,price,year,publishers,pages,sorting,page} = useAppSelector(state => state.filterSlice);
     useEffect(()=>{
