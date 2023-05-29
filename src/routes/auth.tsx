@@ -1,7 +1,8 @@
-import {ERoutes, RouteType} from "../types/RouteType";
+
 import CartPage from "../pages/CartPage";
 import AccountPage from "../pages/AccountPage";
 import WishListPage from "../pages/WishListPage";
+import {ERoutes, RouteType} from "../models/types/RouteType";
 
 export const authRoutes: RouteType[] = [
     {

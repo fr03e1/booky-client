@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {ERoutes} from "../types/RouteType";
+import {ERoutes} from "../models/types/RouteType";
+
 
 const ErrorPage:React.FC = () => {
     return (

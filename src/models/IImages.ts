@@ -1,5 +1,3 @@
-
-
 export interface Images {
     preview: string,
     image2: string,

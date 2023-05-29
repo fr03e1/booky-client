@@ -1,4 +1,3 @@
-import {ERoutes, RouteType} from "../types/RouteType";
 import ShopPage from "../pages/ShopPage";
 import ItemPage from "../pages/ItemPage";
 import RegisterPage from "../pages/RegisterPage";
@@ -6,6 +5,7 @@ import LoginPage from "../pages/LoginPage";
 import MainPage from "../pages/MainPage";
 import BlogPage from "../pages/BlogPage";
 import CartPage from "../pages/CartPage";
+import {ERoutes, RouteType} from "../models/types/RouteType";
 
 export const publicRoutes: RouteType[] = [
     {

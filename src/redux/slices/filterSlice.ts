@@ -1,42 +1,47 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
+import axios from "axios";
+import {IYear} from "../../models/IYear";
+import {IPrice} from "../../models/IPrice";
 
 interface IFilterSliceState {
-    categories: number[],
     authors: number[],
-    sorting: string,
-    pages: string,
-    page: number
+    publishers: number[],
+    year: number[],
+    price: number[],
+    pages: number,
+
 }
 
 const initialState: IFilterSliceState = {
-    categories: [],
     authors: [],
-    sorting: 'title',
-    pages: '8',
-    page: 1
+    publishers: [],
+    year: [],
+    price: [],
+    pages: 8
 }
 
 const filterSlice = createSlice({
     name: 'filters',
     initialState,
     reducers: {
-        setCategoryId(state, action: PayloadAction<number[]>) {
-            state.categories.push(...action.payload);
-        },
         setAuthorId(state, action: PayloadAction<number[]>) {
-            state.authors.push(...action.payload)
+            state.authors = action.payload;
         },
-        setSorting(state, action: PayloadAction<string>) {
-            state.sorting = action.payload
+        setPublisherId(state, action: PayloadAction<number[]>) {
+            state.publishers = action.payload;
         },
-        setPages(state, action: PayloadAction<string>) {
+        dispYear(state,action: PayloadAction<number[]>) {
+            state.year = action.payload;
+        },
+        dispPrice(state,action: PayloadAction<number[]>) {
+            state.price = action.payload
+        },
+        setPagination(state,action) {
             state.pages = action.payload
-        },
-        setPage(state,action) {
-            state.page = action.payload
         }
+
     }
 });
 
 export default filterSlice.reducer;
-export const {setAuthorId} = filterSlice.actions;
+export const {setAuthorId,setPublisherId,dispYear,dispPrice,setPagination} = filterSlice.actions;

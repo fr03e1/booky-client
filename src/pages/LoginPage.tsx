@@ -1,8 +1,8 @@
 import React, {useEffect, useRef} from 'react';
-import Breadcrumb from "../components/Breadcrumb";
 import image from "../assets/images/inner-pages/login-bg.png";
 import {Link} from "react-router-dom";
-import {ERoutes} from "../types/RouteType";
+import {ERoutes} from "../models/types/RouteType";
+
 
 const LoginPage:React.FC = () => {
     const divRef = useRef<HTMLDivElement>(null);
